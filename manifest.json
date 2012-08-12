@@ -1,11 +1,11 @@
 {
-  "name": "我的扩展实例",
+  "name": "滚去背单词chrome扩展",
   "version": "1.0",
   "permissions": [
     "tabs", "http://*/*", "https://*/*"
   ],
   "browser_action": {
-      "default_title": "Set this page's color.",
+      "default_title": "滚去查单词",
       "default_icon": "icons/favicon.ico",
       "popup": "html/popup.html"
   }
