@@ -15,6 +15,7 @@ $(function(){
 			dataType:'json',
 			success:function(data){
 				if(data.status == "OK") {
+               decodeJSON(data);
 					$('#result').html(template(_.extend(data, {word: word})));
 					// $('#result').html(Mustache.render(_.extend(data, {word: word})));
 
@@ -28,4 +29,16 @@ $(function(){
 		});
 
 	});
+
+   function decodeJSON(json) 
+   { 
+      for(var i in json){         
+         if(typeof json[i]=="object"){ 
+            decodeJSON(json[i]); 
+         } else {
+            json[i] = decodeURI(json[i]);
+         } 
+      } 
+      return json
+   }
 });
