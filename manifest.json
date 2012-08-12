@@ -1,12 +1,12 @@
 {
-	"name": "第二个Chrome插件", 
-   "version": "0.1", 
-   "permisions":[
-   "tabs","http://*/8","https://*/*"
-   ],
-   "browser_action": { 
-      "default_title": "Set this page's color", 
-      "default_icon": "icon.png",
-      "popup": "popup.html" 
-   }
+  "name": "我的扩展实例",
+  "version": "1.0",
+  "permissions": [
+    "tabs", "http://*/*", "https://*/*"
+  ],
+  "browser_action": {
+      "default_title": "Set this page's color.",
+      "default_icon": "icons/favicon.ico",
+      "popup": "html/popup.html"
+  }
 }
