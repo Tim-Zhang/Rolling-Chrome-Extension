@@ -1,12 +1,16 @@
 {
-  "name": "滚去背单词chrome扩展",
-  "version": "1.0",
+  "name": "滚去背单词插件",
+  "version": "1.2.1",
   "permissions": [
     "tabs", "http://*/*", "https://*/*"
   ],
   "browser_action": {
       "default_title": "滚去查单词",
       "default_icon": "icons/favicon.ico",
-      "popup": "html/popup.html"
-  }
+      "default_popup": "html/popup.html"
+  },
+  "sandbox": {
+      "pages": ["html/popup.html"]
+  },
+  "manifest_version": 2
 }

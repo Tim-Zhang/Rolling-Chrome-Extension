@@ -15,6 +15,7 @@ $(function(){
 			dataType:'json',
 			success:function(data){
 				if(data.status == "OK") {
+               console.log(data);
                decodeJSON(data);
 					$('#result').html(template(_.extend(data, {word: word})));
 					// $('#result').html(Mustache.render(_.extend(data, {word: word})));
