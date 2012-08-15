@@ -37,7 +37,14 @@ $(function(){
          if(typeof json[i]=="object"){ 
             decodeJSON(json[i]); 
          } else {
-            json[i] = decodeURI(json[i]);
+            try {
+               json[i] = decodeURI(json[i]);
+            }
+            catch(exception){
+               console.log(exception, json[i]);
+               //log but do nothing
+            
+            }
          } 
       } 
       return json
