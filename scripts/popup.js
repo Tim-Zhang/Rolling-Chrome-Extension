@@ -16,7 +16,7 @@ $(function(){
 			success:function(data){
 				if(data.status == "OK") {
                console.log(data);
-               decodeJSON(data);
+               replaceJSON(data);
 					$('#result').html(template(_.extend(data, {word: word})));
 					// $('#result').html(Mustache.render(_.extend(data, {word: word})));
 
@@ -31,6 +31,24 @@ $(function(){
 
 	});
 
+   function replaceJSON(json) 
+   { 
+      for(var i in json){         
+         if(typeof json[i]=="object"){ 
+            replaceJSON(json[i]); 
+         } else {
+            try {
+               json[i] = json[i].replace("%27","'"); 
+            }
+            catch(exception){
+               console.log(exception, json[i]);
+               //log but do nothing
+            
+            }
+         } 
+      } 
+      return json
+   }
    function decodeJSON(json) 
    { 
       for(var i in json){         
