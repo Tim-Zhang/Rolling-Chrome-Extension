@@ -9,6 +9,12 @@
       "default_icon": "icons/favicon.ico",
       "default_popup": "html/popup.html"
   },
+  "content_scripts": [
+     {
+        "matches": ["http://*/*","https://*/*"],
+        "js": ["scripts/test.js"]
+     }
+  ],
   "sandbox": {
       "pages": ["html/popup.html"]
   },
