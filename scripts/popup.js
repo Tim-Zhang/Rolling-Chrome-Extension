@@ -14,17 +14,9 @@ $(function(){
 			url: API_SEARCH + encodeURI(word),
 			dataType:'json',
 			success:function(data){
-				if(data.status == "OK") {
-               console.log(data);
-               replaceJSON(data);
-					$('#result').html(template(_.extend(data, {word: word})));
-					// $('#result').html(Mustache.render(_.extend(data, {word: word})));
-
-
-				} else {
-					$('#result').html(template(_.extend(data, {info: '翻滚吧，牛宝宝！'})));
-
-				}
+            replaceJSON(data);
+            $('#result').html(template(_.extend(data, {word: word})));
+            // $('#result').html(Mustache.render(_.extend(data, {word: word})));
 
 			},
 		});

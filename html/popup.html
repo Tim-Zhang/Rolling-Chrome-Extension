@@ -18,7 +18,7 @@
 <body>
 
 <div class="span4 main" style="margin-left:0">
-  <form class="form-search search">
+  <form class="form-search search" style="">
     <fieldset>
       <div class="control-group">
               <div class="input-append input-prepend">
@@ -29,35 +29,39 @@
     </fieldset>
   </form>
 <div class="" id="result">
-
 </div>
 </div>
 
 
 <script id="tpl-word-def" type="text/template">
-    <div class="dictbarcont well-small">
-        {{#if word}}<strong class="defBarTitle">{{word}}</strong>{{/if}}
-        {{#if info}}<span class="defBarTitle">{{info}}</span>{{/if}}
-        <span class="defBarProns">
-            {{#results.PROS.PRO}}
-            <span style="color:#4F6985; font-size:75%">{{$L}}: </span> [{{$}}]&nbsp;&nbsp;
-            {{/results.PROS.PRO}}
-        </span>
-    </div>
-    <div class="defInnerCntr">
-        {{#results.DEF}}
-        {{#SENS}}
-        <div class="defGroup">
-           <div class="defPos"><span class="label label-info">{{$POS}}.</span></div>
-            <ol class="defCnt">
-                {{#SEN}}
-                <li>{{D.$}}</li>
-                {{/SEN}}
-            </ol>
-        </div>
-        {{/SENS}}
-        {{/results.DEF}}
-    </div>
+    {{#if results}}
+       <div class="dictbarcont well-small">
+           {{#if word}}<strong class="defBarTitle">{{word}}</strong>{{/if}}
+           {{#if info}}<span class="defBarTitle">{{info}}</span>{{/if}}
+           <span class="defBarProns">
+               {{#results.PROS.PRO}}
+               <span style="color:#4F6985; font-size:75%">{{$L}}: </span> [{{$}}]&nbsp;&nbsp;
+               {{/results.PROS.PRO}}
+           </span>
+       </div>
+       <div class="defInnerCntr">
+           {{#results.DEF}}
+           {{#SENS}}
+           <div class="defGroup">
+              <div class="defPos"><span class="label label-info">{{$POS}}.</span></div>
+               <ol class="defCnt">
+                   {{#SEN}}
+                   <li>{{D.$}}</li>
+                   {{/SEN}}
+               </ol>
+           </div>
+           {{/SENS}}
+           {{/results.DEF}}
+       </div>
+      
+    {{else}}
+         <img src="/img/42.jpg"/>
+    {{/if}}
 </script>
 </body>
 </html>
