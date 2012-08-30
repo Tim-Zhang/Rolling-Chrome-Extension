@@ -1,6 +1,6 @@
 {
   "name": "滚去背单词插件",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "permissions": [
     "tabs", "http://*/*", "https://*/*"
   ],
@@ -11,8 +11,8 @@
   },
   "content_scripts": [
      {
-        "matches": ["http://*/*","https://*/*"],
-        "js": ["scripts/test.js"]
+       // "matches": ["http://*/*","https://*/*"],
+       // "js": ["scripts/test.js"]
      }
   ],
   "sandbox": {
