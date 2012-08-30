@@ -18,11 +18,12 @@
 <body>
 
 <div class="span4 main" style="margin-left:0">
-  <form class="form-search search" style="">
+  <form class="form-search search">
     <fieldset>
       <div class="control-group">
               <div class="input-append input-prepend">
-                <span class="add-on"><i class="icon-book"></i></span><input class="span2" id="word" size="16" type="text" x-webkit-speech id="voice" onwebkitspeechchange="speechChange()"/><button class="btn" type="submit"><i class="icon-search"></i> 搜索</button>              
+                <span class="add-on"><i class="icon-book"></i></span><input
+                autofocus class="span2" id="word" size="16" type="text" x-webkit-speech id="voice" onwebkitspeechchange="speechChange()"/><button class="btn" type="submit"><i class="icon-search"></i> 搜索</button>              
             </div>
           </div>
     </fieldset>
@@ -47,7 +48,7 @@
         {{#results.DEF}}
         {{#SENS}}
         <div class="defGroup">
-            <div class="defPos">{{$POS}}.</div>
+           <div class="defPos"><span class="label label-info">{{$POS}}.</span></div>
             <ol class="defCnt">
                 {{#SEN}}
                 <li>{{D.$}}</li>
