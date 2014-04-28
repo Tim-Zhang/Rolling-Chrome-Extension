@@ -3,7 +3,7 @@ Rolling Word Chrome Extension
 
 
 这是一个Chrome查单词插件，后端调用[滚去背单词](http://rollingword.com/)API
-![滚词插件](https://lh6.googleusercontent.com/d_6JH9m9G9jzD-ASdIE6wp3ZxmAeQ3s5kfsFRlHxsc-BKgWq44KYyeI9S16zbbPojDlkch16qA=s640-h400-e365-rw)
+![滚词插件](https://lh6.googleusercontent.com/d_6JH9m9G9jzD-ASdIE6wp3ZxmAeQ3s5kfsFRlHxsc-BKgWq44KYyeI9S16zbbPojDlkch16qA=s1280-h800-e365-rw)
 
 Install
 ========================
